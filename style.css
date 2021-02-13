@@ -1,0 +1,13 @@
+body {
+  background-color: Beige;
+}
+h1 {
+  color: DarkSlateGrey;
+  font-family: "Times New Roman", Times, serif;
+}
+p {
+  font-family: "Lucida Console", "Lucida Sans Typewriter";
+}
+label {
+	font-family: Arial, Helvetica, sans-serif;
+}

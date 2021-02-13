@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<!-- call for head for html file -->
+<head>
+<!-- call css sheet -->
+<link rel="stylesheet" href="style.css">
+<script>
+<!-- create function for customer information submission -->
+function submitFunction() {
+<!-- create customer object to store variables -->
+<!-- Note: could be done without an object, but it makes sense to wrangle all variables in an object -->
+	var customer = {
+	first: '',
+	last: '',
+	email: ''
+	};
+	<!-- change variables for first, last names and email by calling for value in element in text boxes -->
+	customer.first = document.getElementById('customerFirstNameInput').value;
+	customer.last = document.getElementById('customerLastNameInput').value;
+	customer.email = document.getElementById('customerEmailInput').value;
+	<!-- display "Customer information submitted!" when information successfully submitted -->
+	document.getElementById("processComplete").innerHTML = "Customer information submitted!";
+	<!-- for verifying that variables were properly assigned the information in textboxes, display those variables -->
+	document.getElementById("customerFirstNameFunction").innerHTML = customer.first;
+	document.getElementById("customerLastNameFunction").innerHTML = customer.last;
+	document.getElementById("customerEmailFunction").innerHTML = customer.email;
+	}
+</script>
+<!-- set title of site -->
+<title>Customer Information</title>
+</head>
+<!-- start body of site -->
+<body>
+<!-- display header -->
+<h1>Customer information</h1><hr>
+<!-- display name headers and input elements for textboxes of user input -->
+<label>First name:	</label>
+<input type="text" id="customerFirstNameInput" /><br>
+<label>Last name:	</label>
+<input type="text" id="customerLastNameInput" /><br>
+<label>Email address:	</label>
+<input type="text" id="customerEmailInput" /><br>
+<!-- button element that ties to submittion function -->
+<button type="button" onclick="submitFunction()">Submit</button>
+<!-- elements of output for success of user input -->
+<p id="processComplete"></p>
+<p id="customerFirstNameFunction"></p>
+<p id="customerLastNameFunction"></p>
+<p id="customerEmailFunction"></p>
+</body>
